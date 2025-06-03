@@ -5,9 +5,31 @@ from datetime import datetime
 import csv
 import io
 
-st.set_page_config(page_title="MyFitnessPal Dashboard", layout="wide")
-st.title("🥗 MyFitnessPal Nutrition Tracker")
+# Set page configuration
+st.set_page_config(
+    page_title="Gordita's Dachshund Bites",
+    layout="wide",
+    page_icon="🌭"  # Dachshund-like emoji
+)
 
+# Custom CSS for header style and a cute heart-dog vibe
+st.markdown("""
+    <style>
+    .main h1 {
+        font-family: 'Comic Sans MS', cursive, sans-serif;
+        color: #d45c5c;
+        text-align: center;
+    }
+    .stApp {
+        background-color: #fff8f0;
+    }
+    </style>
+""", unsafe_allow_html=True)
+
+# App title
+st.title("🐶 Made with Love for Gordita — Dachshund Bites & Nutrition 💕")
+
+# Initialize Supabase client
 supabase = get_supabase_client()
 
 # --- Upload CSV ---
