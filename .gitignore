@@ -1,0 +1,4 @@
+# Evitar exponer archivos sensibles
+.env
+.env.*
+!env.example
